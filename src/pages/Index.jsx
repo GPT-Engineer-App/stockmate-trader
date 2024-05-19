@@ -1,4 +1,5 @@
 import { Box, Button, Flex, Heading, Text, VStack } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 import { FaPlus } from "react-icons/fa";
 
 const Index = () => {
@@ -10,7 +11,7 @@ const Index = () => {
           Keep track of your stock and options trades with ease. Utilize GPT-4 to analyze and improve your trading strategies.
         </Text>
         <VStack spacing={4}>
-          <Button colorScheme="teal" size="lg" leftIcon={<FaPlus />}>
+          <Button as={Link} to="/add-trade" colorScheme="teal" size="lg" leftIcon={<FaPlus />}>
             Add New Trade
           </Button>
           <Button colorScheme="blue" size="lg">
