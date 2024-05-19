@@ -1,15 +1,25 @@
-// Complete the Index page component here
-// Use chakra-ui
-import { Button } from "@chakra-ui/react"; // example
-import { FaPlus } from "react-icons/fa"; // example - use react-icons/fa for icons
+import { Box, Button, Flex, Heading, Text, VStack } from "@chakra-ui/react";
+import { FaPlus } from "react-icons/fa";
 
 const Index = () => {
-  // TODO: Create the website here!
   return (
-    <Button>
-      Hello world! <FaPlus />
-    </Button>
-  ); // example
+    <Box p={4}>
+      <Flex direction="column" align="center" justify="center" p={10}>
+        <Heading mb={4}>Trading Journal</Heading>
+        <Text fontSize="lg" mb={6}>
+          Keep track of your stock and options trades with ease. Utilize GPT-4 to analyze and improve your trading strategies.
+        </Text>
+        <VStack spacing={4}>
+          <Button colorScheme="teal" size="lg" leftIcon={<FaPlus />}>
+            Add New Trade
+          </Button>
+          <Button colorScheme="blue" size="lg">
+            View Journal
+          </Button>
+        </VStack>
+      </Flex>
+    </Box>
+  );
 };
 
 export default Index;
